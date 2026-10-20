@@ -150,8 +150,8 @@ export default async function Image() {
             marginTop: "8px",
           }}
         >
-          Software Engineer // 2+ years Node.js &amp; React.js // MSc Software
-          Engineering at EPITA Paris
+          Software Engineer // 2+ years Node.js &amp; React.js // MSc Software Engineering
+          at EPITA Paris
         </div>
       </div>
 

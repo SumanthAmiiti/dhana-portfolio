@@ -17,6 +17,7 @@ A production-ready, high-performance 3D portfolio for **Dhana Sri Rongali**, Sof
 - **Tooling**: TypeScript, ESLint 9 (Flat Config), Prettier, pnpm
 
 ### Visual Direction: "Dev Terminal Neon"
+
 - **Background**: `#05060A` with subtle terminal grid overlay
 - **Surface**: `#0D1018`
 - **Borders**: `#232938`
@@ -30,6 +31,7 @@ A production-ready, high-performance 3D portfolio for **Dhana Sri Rongali**, Sof
 ## 🚀 Quickstart & Local Development
 
 ### Prerequisites
+
 - Node.js `20.x` or `22.x`
 - `pnpm` (v10+ or v12+)
 
@@ -140,7 +142,7 @@ export const portfolioData = {
   ],
   expertise: [
     // 01-04 rows and skill chips
-  ]
+  ],
 };
 ```
 
@@ -166,6 +168,7 @@ Before public promotion, replace the `[PLACEHOLDER]` values marked in `data/port
 ### Method 1: GitHub Push & Vercel Auto-Deploy (Recommended)
 
 1. **Create a new GitHub repository**:
+
    ```bash
    # Create repository on GitHub (via web or gh CLI)
    git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/dhanasri-portfolio.git
