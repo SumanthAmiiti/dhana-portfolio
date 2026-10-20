@@ -1,26 +1,188 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bg-base: #05060a;
+  --color-surface: #0d1018;
+  --color-surface-hover: #131722;
+  --color-surface-card: #0f131e;
+  --color-border-subtle: #232938;
+  --color-border-glow: #384259;
+  --color-neon-lime: #c6ff3d;
+  --color-neon-lime-dim: #94cc20;
+  --color-neon-lime-glow: rgba(198, 255, 61, 0.35);
+  --color-neon-lime-badge: rgba(198, 255, 61, 0.12);
+  --color-neon-violet: #5a6eff;
+  --color-neon-violet-dim: #4354d4;
+  --color-neon-violet-glow: rgba(90, 110, 255, 0.3);
+  --color-text-main: #e6eaf0;
+  --color-text-muted: #a3acbd;
+  --color-text-faint: #60687a;
+
+  --font-mono:
+    var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: #05060a;
+  color: #e6eaf0;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #05060a;
+  color: #e6eaf0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  selection-background-color: #c6ff3d;
+  selection-color: #05060a;
+}
+
+::selection {
+  background-color: #c6ff3d;
+  color: #05060a;
+}
+
+/* Dev terminal background grid */
+.terminal-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(35, 41, 56, 0.28) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(35, 41, 56, 0.28) 1px, transparent 1px);
+}
+
+/* Ambient glow accents */
+.glow-lime-top-left {
+  position: fixed;
+  top: -160px;
+  left: -160px;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(
+    circle,
+    rgba(198, 255, 61, 0.12) 0%,
+    rgba(198, 255, 61, 0.02) 50%,
+    transparent 75%
+  );
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 9999px;
+  filter: blur(40px);
+}
+
+.glow-violet-right {
+  position: fixed;
+  top: 25%;
+  right: -180px;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(
+    circle,
+    rgba(90, 110, 255, 0.14) 0%,
+    rgba(90, 110, 255, 0.02) 55%,
+    transparent 80%
+  );
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 9999px;
+  filter: blur(50px);
+}
+
+.glow-bottom-subtle {
+  position: fixed;
+  bottom: -200px;
+  left: 30%;
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(198, 255, 61, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(60px);
+}
+
+/* Neon utilities */
+.border-neon-glow {
+  border-color: #c6ff3d;
+  box-shadow:
+    0 0 20px rgba(198, 255, 61, 0.2),
+    inset 0 0 10px rgba(198, 255, 61, 0.05);
+}
+
+.text-neon-lime {
+  color: #c6ff3d;
+}
+
+.text-neon-violet {
+  color: #5a6eff;
+}
+
+/* Blinking terminal cursor */
+@keyframes terminalBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.1em;
+  background-color: #c6ff3d;
+  vertical-align: -0.15em;
+  margin-left: 2px;
+  animation: terminalBlink 1s infinite steps(1);
+}
+
+/* Focus styles for strict A11y */
+:focus-visible {
+  outline: 2px solid #c6ff3d;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Custom terminal scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05060a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232938;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #384259;
+}
+
+/* Reduced motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .blinking-cursor {
+    animation: none !important;
+    opacity: 1 !important;
+  }
 }
