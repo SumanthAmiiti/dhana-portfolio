@@ -117,14 +117,19 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} ${inter.variable} dark`}>
+    <html
+      lang="en"
+      className={`${jetbrainsMono.variable} ${inter.variable} dark`}
+    >
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
         />
       </head>
-      <body className="bg-[#05060A] text-[#E6EAF0] antialiased selection:bg-[#C6FF3D] selection:text-[#05060A] min-h-screen relative font-sans">
+      <body
+        className={`${inter.className} ${jetbrainsMono.variable} ${inter.variable} bg-[#05060A] text-[#E6EAF0] antialiased selection:bg-[#C6FF3D] selection:text-[#05060A] min-h-screen relative font-sans`}
+      >
         {/* Subtle radial lime glow top-left, blue-violet glow right */}
         <div className="glow-lime-top-left" aria-hidden="true" />
         <div className="glow-violet-right" aria-hidden="true" />
