@@ -3,12 +3,13 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import TiltCard from "@/components/TiltCard";
 import ExpertiseRow from "@/components/ExpertiseRow";
+import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
 import ClosingCTA from "@/components/ClosingCTA";
 import { portfolioData } from "@/data/portfolio";
 
 export default function Home() {
-  const { projects, expertise } = portfolioData;
+  const { projects, expertise, experience } = portfolioData;
 
   return (
     <main id="main-content" className="relative z-10 focus:outline-none" tabIndex={-1}>
@@ -47,10 +48,22 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* 6. /education */}
+      {/* 6. /experience */}
+      <Section
+        id="experience"
+        number="03"
+        badge="Work History"
+        title="experience"
+        count={experience.length.toString().padStart(2, "0")}
+        description="Professional engineering roles and internship experience across full-stack development and real-world software projects."
+      >
+        <ExperienceSection />
+      </Section>
+
+      {/* 7. /education */}
       <Section
         id="education"
-        number="03"
+        number="04"
         badge="Academic Foundation"
         title="education"
         description="Formal master's education in computer science, software architecture, and distributed engineering in Paris, France."

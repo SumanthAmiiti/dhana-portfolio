@@ -102,6 +102,25 @@ export default function RootLayout({
       location: "Paris, France",
     },
     sameAs: [portfolioData.social.github, portfolioData.social.linkedin],
+    hasOccupation: [
+      {
+        "@type": "Occupation",
+        name: "Software Engineer / Backend Developer (MERN)",
+        occupationLocation: { "@type": "City", name: "Remote" },
+        startDate: "2024-06",
+      },
+      {
+        "@type": "Occupation",
+        name: "Software Development Intern",
+        occupationLocation: { "@type": "Country", name: "India" },
+        startDate: "2023-11",
+        endDate: "2024-05",
+        hiringOrganization: {
+          "@type": "Organization",
+          name: "Tecnics Integration Technologies Pvt Ltd",
+        },
+      },
+    ],
     knowsAbout: [
       "Software Engineering",
       "Full-Stack Development",

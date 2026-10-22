@@ -22,6 +22,18 @@ export interface ExpertiseItem {
   metricsOrHighlights: string[];
 }
 
+export interface ExperienceItem {
+  id: string;
+  title: string;
+  company: string;
+  type: "full-time" | "internship" | "contract" | "part-time";
+  dates: string;
+  location: string;
+  plainSummary: string;
+  techDetails: string[];
+  stack: string[];
+}
+
 export interface EducationItem {
   degree: string;
   field: string;
@@ -58,6 +70,7 @@ export interface PortfolioData {
     tagPills: string[];
   };
   social: SocialLinks;
+  experience: ExperienceItem[];
   education: EducationItem[];
   expertise: ExpertiseItem[];
   projects: Project[];
@@ -108,6 +121,41 @@ export const portfolioData: PortfolioData = {
     linkedin: "https://linkedin.com/in/[PLACEHOLDER_LINKEDIN_USERNAME]",
     twitter: "https://x.com/[PLACEHOLDER_TWITTER_USERNAME]",
   },
+
+  experience: [
+    {
+      id: "exp-01",
+      title: "Software Engineer / Backend Developer (MERN)",
+      company: "Freelance / Independent",
+      type: "full-time",
+      dates: "June 2024 – Present",
+      location: "Remote",
+      plainSummary:
+        "Full-stack software engineering work, focusing on Node.js and React.js ecosystems, building robust APIs, cloud deployments, and interactive web applications.",
+      techDetails: [
+        "Full-stack development with Node.js, React.js, Express, and MongoDB (MERN stack)",
+        "RESTful API design, database schema design, and cloud infrastructure on AWS",
+        "TypeScript, containerization with Docker, and CI/CD automation",
+      ],
+      stack: ["Node.js", "React.js", "Express", "MongoDB", "TypeScript", "AWS", "Docker"],
+    },
+    {
+      id: "exp-02",
+      title: "Software Development Intern",
+      company: "Tecnics Integration Technologies Pvt Ltd",
+      type: "internship",
+      dates: "November 2023 – May 2024",
+      location: "India",
+      plainSummary:
+        "Worked on real software projects at the company, learning how websites and apps are built from the screen users see to the database behind it, and how to find and fix problems.",
+      techDetails: [
+        "Full-stack software development tasks: programming, databases and web applications",
+        "Debugging and fixing issues in assigned work",
+        "Completed the internship successfully with a certificate of completion from the company",
+      ],
+      stack: ["Web Development", "Databases", "Full-Stack"],
+    },
+  ],
 
   education: [
     {
