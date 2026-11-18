@@ -61,7 +61,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-[#0D1018] border border-[#232938] text-[#A3ACBD] hover:text-[#5A6EFF] hover:border-[#5A6EFF]/50 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(90,110,255,0.2)] transition-all duration-200"
               aria-label="LinkedIn Profile (opens in new tab)"
-              title="LinkedIn: https://www.linkedin.com/in/dhana-sri-rongali-204545198/"
+              title="LinkedIn: https://www.linkedin.com/in/dhanasri-rongali-204545198/"
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>

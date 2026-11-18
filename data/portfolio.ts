@@ -117,7 +117,7 @@ export const portfolioData: PortfolioData = {
   social: {
     email: "dhanasri0911@gmail.com",
     github: "https://github.com/DhanasriRongali",
-    linkedin: "https://www.linkedin.com/in/dhana-sri-rongali-204545198/",
+    linkedin: "https://www.linkedin.com/in/dhanasri-rongali-204545198/",
   },
 
   experience: [

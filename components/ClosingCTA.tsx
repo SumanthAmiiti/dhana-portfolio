@@ -52,7 +52,7 @@ export default function ClosingCTA() {
     {
       id: "linkedin",
       label: "LinkedIn",
-      value: "dhana-sri-rongali",
+      value: "dhanasri-rongali",
       href: social.linkedin,
       target: "_blank",
       rel: "noopener noreferrer",
