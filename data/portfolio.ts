@@ -115,11 +115,9 @@ export const portfolioData: PortfolioData = {
   },
 
   social: {
-    // [PLACEHOLDER] Replace with verified contact and profile links
-    email: "[PLACEHOLDER_EMAIL: contact@dhanasri.dev]",
-    github: "https://github.com/[PLACEHOLDER_GITHUB_USERNAME]",
-    linkedin: "https://linkedin.com/in/[PLACEHOLDER_LINKEDIN_USERNAME]",
-    twitter: "https://x.com/[PLACEHOLDER_TWITTER_USERNAME]",
+    email: "dhanasri0911@gmail.com",
+    github: "https://github.com/DhanasriRongali",
+    linkedin: "https://www.linkedin.com/in/dhana-sri-rongali-204545198/",
   },
 
   experience: [
